@@ -1694,5 +1694,42 @@
       }
     ],
     "submittedAt": "2026-09-11T07:45:56.997Z"
+  },
+  {
+    "name": "harshita",
+    "email": "harshijain1105@gmail.com",
+    "material": "agro",
+    "product": "newsprint",
+    "values": {
+      "growth": "1",
+      "ebitda": "87"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 65.77034362234434
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": null
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": null
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T09:21:15.196Z"
   }
 ]
