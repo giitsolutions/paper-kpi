@@ -614,7 +614,30 @@ a.contact-tile:hover { border-color:var(--blue-2, #0d63d4); background:var(--blu
 @media (max-width: 560px) {
   .info-page { padding-top:28px; }
   .info-card, .info-section, .method-card, .results-empty { padding:20px; }
-  .topnav .nav-links { display:none; }
+  .topnav {
+  padding: 10px 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topnav .nav-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 8px;
+  margin: 0;
+  order: 3;
+}
+
+.topnav .nav-link {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav-status {
+  font-size: 13px;
+  padding: 6px 10px;
+}
   .nav-status { font-size:15px; }
   .page { padding:20px 13px 34px; }
   h1 { font-size:28px; }
