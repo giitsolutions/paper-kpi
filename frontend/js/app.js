@@ -981,13 +981,24 @@ actionButtons.forEach(el => el.style.display = "none");
 if (pdfButton) pdfButton.style.display = "none";
 
   try {
-    const canvas = await html2canvas(report, {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: "#eef6fd",
-      logging: false,
-      windowWidth: report.scrollWidth
-    });
+    // Mobile ko render settle hone do
+await new Promise(resolve => setTimeout(resolve, 300));
+
+const canvas = await html2canvas(report, {
+  scale: window.devicePixelRatio > 1 ? 1.5 : 2,
+  useCORS: true,
+  backgroundColor: "#eef6fd",
+  logging: false,
+
+  width: report.scrollWidth,
+  height: report.scrollHeight,
+
+  windowWidth: report.scrollWidth,
+  windowHeight: report.scrollHeight,
+
+  scrollX: 0,
+  scrollY: -window.scrollY
+});
 
     const { jsPDF } = window.jspdf;
 
