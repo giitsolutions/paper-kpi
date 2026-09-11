@@ -191,11 +191,18 @@ function topNav(activeLabel) {
   const labels = ["Home", "About", "Methodology", "Contact", "Results"];
   return `
     <div class="topnav">
-      <div class="brand-wrap">
-        <button class="brand-button" data-nav="Home" aria-label="Go to Home">
-          <img class="acg-logo" src="img/acg-logo.png" alt="ACG Logo">
-        </button>
-      </div>
+     <div class="brand-wrap">
+  <button class="brand-button" data-nav="Home" aria-label="Go to Home">
+    <img class="acg-logo" src="img/acg-logo.png" alt="ACG Logo">
+
+    <div class="brand-divider"></div>
+
+    <div class="brand-text">
+      <span class="brand-title">Mill Compass</span>
+      <span class="brand-subtitle">Benchmark Intelligence Platform</span>
+    </div>
+  </button>
+</div>
       <div class="nav-links">
         ${labels.map((label) => `<button type="button" class="nav-link ${activeLabel === label ? "active" : ""}" data-nav="${label}">${label}</button>`).join("")}
       </div>
@@ -267,7 +274,7 @@ function renderAbout() {
 
       <div class="row-actions">
         <button class="btn btn-ghost" data-nav="Home">← Back to Home</button>
-        <button class="btn" id="about-start">Start Benchmarking →</button>
+        <button class="btn" id="about-start">Start Self Evaluation →</button>
       </div>
     </main>
   `;
@@ -319,7 +326,7 @@ function renderMethodology() {
 
       <div class="row-actions">
         <button class="btn btn-ghost" data-nav="Home">← Back to Home</button>
-        <button class="btn" id="method-start">Start Benchmarking →</button>
+        <button class="btn" id="method-start">Start Self Evaluation →</button>
       </div>
     </main>
   `;
@@ -373,7 +380,7 @@ function renderContact() {
           <div class="contact-avatar">${initials}</div>
           <div>
             <h3 class="contact-profile-name">Arvind Garg</h3>
-            <p class="contact-profile-role">Partner</p>
+            <p class="contact-profile-role">Founder & MD</p>
           </div>
         </div>
         <div class="contact-tile-grid">
@@ -394,7 +401,7 @@ function renderContact() {
 
       <div class="row-actions">
         <button class="btn btn-ghost" data-nav="Home">← Back to Home</button>
-        <button class="btn" id="contact-start">Start Benchmarking →</button>
+        <button class="btn" id="contact-start">Start Self Evaluation →</button>
       </div>
     </main>
   `;
@@ -422,7 +429,7 @@ function renderResultsNavPage() {
         <span class="eyebrow">Results</span>
         <h1>Your benchmark results will appear here.</h1>
         <p class="lede">Complete the short assessment first. Once you calculate your KPIs, use this tab any time to return to your dashboard.</p>
-        <button class="btn" id="results-start">Start Assessment →</button>
+        <button class="btn" id="results-start">Start Self Evaluation →</button>
       </section>
     </main>
   `;
@@ -486,8 +493,8 @@ function renderIntro() {
       <section class="hero hero-compact">
         <div class="hero-content">
           <p class="eyebrow">Step 1 · Details</p>
-          <h1>Let's start your benchmark</h1>
-          <p class="lede">Enter your details to personalize your benchmarking session.</p>
+          <h1>Let's start your Self Evaluation</h1>
+          <p class="lede">Enter your details to personalize your Self Evaluation session.</p>
         </div>
       </section>
 
@@ -508,6 +515,51 @@ function renderIntro() {
           <button class="btn btn-ghost" id="btn-home-back">&#8592; Back</button>
           <button class="btn" id="btn-continue">Continue &#8594;</button>
         </div>
+        <div class="privacy-note">
+  <div class="privacy-item">
+    <div class="privacy-icon">
+  <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+    <path d="M12 3L5 6v5c0 5 3.5 8 7 10 3.5-2 7-5 7-10V6l-7-3Z"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M9.5 12l2 2 4-4"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</div>
+    <div>
+      <h4>Your Privacy Matters</h4>
+      <p>
+        We do not permanently store your personal information or benchmarking inputs.
+        Your data is used only to generate your benchmarking report for the current session.
+      </p>
+    </div>
+  </div>
+
+  <div class="privacy-divider"></div>
+
+  <div class="privacy-item">
+    <div class="privacy-icon">
+  <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+    <path d="M12 4v10m0 0l4-4m-4 4-4-4M5 20h14"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</div>
+    <div>
+      <h4>Download your report before leaving</h4>
+      <p>
+        Before closing or refreshing the page, please download your PDF report.
+        Your session data may not be available after you leave the page.
+      </p>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   `;
@@ -618,7 +670,7 @@ function renderForm() {
     <div class="page">
       ${stepper("form")}
       <p class="eyebrow">Step 3 · KPI values</p>
-      <h2>Enter your KPI values</h2>
+      <h2>Enter your relevant KPI values</h2>
       <p class="lede">Provide your current KPI values. You can expand each category to enter the relevant metrics.</p>
       <div class="progress-meta"><span>${filled} of ${allKpis.length} KPIs completed</span><span>${Math.round((filled / allKpis.length) * 100)}%</span></div>
       <div class="progress-bar"><div class="progress-fill" style="width:${(filled / allKpis.length) * 100}%"></div></div>
@@ -762,33 +814,50 @@ const weaknesses = withScore
         <div class="legend-sub">Here's what each band means and the percentile range it covers.</div>
 
         <div class="range-row">
-          <div class="range-item">
-            <span class="range-dot" style="background:var(--red);"></span><span class="range-name">Below Average</span>
-            <div class="range-range">0th – 49th percentile</div>
-          </div>
-          <div class="range-item">
-            <span class="range-dot" style="background:var(--amber);"></span><span class="range-name">Above Average</span>
-            <div class="range-range">50th – 89th percentile</div>
-          </div>
-          <div class="range-item">
-            <span class="range-dot" style="background:var(--green);"></span><span class="range-name">Best-in-Class</span>
-            <div class="range-range">90th – 100th percentile</div>
-          </div>
-        </div>
+  <div class="range-item">
+    <span class="range-dot range-dot-below"></span>
+    <span class="range-name">Below Average</span>
+    <div class="range-range">0 – 50 percentile</div>
+  </div>
+
+  <div class="range-item">
+    <span class="range-dot range-dot-average"></span>
+    <span class="range-name">Average</span>
+    <div class="range-range">50 – 75 percentile</div>
+  </div>
+
+  <div class="range-item">
+    <span class="range-dot range-dot-good"></span>
+    <span class="range-name">Good</span>
+    <div class="range-range">75 – 90 percentile</div>
+  </div>
+
+  <div class="range-item">
+    <span class="range-dot range-dot-best"></span>
+    <span class="range-name">Best-in-Class</span>
+    <div class="range-range">90 – 100 percentile</div>
+  </div>
+</div>
 
         <div class="scale-wrap">
-          <div class="scale-bar">
-            <div class="scale-seg-below"></div>
-            <div class="scale-seg-above"></div>
-            <div class="scale-seg-best"></div>
-          </div>
-          <div class="scale-ticks">
-            <span>0</span><span>50</span><span>90</span><span>100</span>
-          </div>
+         <div class="scale-bar">
+  <div class="scale-seg-below"></div>
+  <div class="scale-seg-average"></div>
+  <div class="scale-seg-good"></div>
+  <div class="scale-seg-best"></div>
+</div>
+
+<div class="scale-ticks">
+  <span>0</span>
+  <span>50</span>
+  <span>75</span>
+  <span>90</span>
+  <span>100</span>
+</div>
         </div>
 
         <div class="definition-box">
-          <b>What is a percentile?</b>Just like exam percentiles, this shows how you compare to others — not your marks out of 100, but your standing among all mills. 69th percentile = you outperformed 69 out of every 100 mills.
+          Percentile shows how you compare to others. For example 69 percentile of a parameter would indicate that you are better than 69 percent of the companies in your industry on that parameter.
         </div>
       </div>
 
@@ -837,12 +906,29 @@ const weaknesses = withScore
 
 <div class="pdf-download-wrap">
   <button class="btn pdf-download-btn" id="btn-download-pdf">
-    &#128196; Download result as PDF
+    📄 Download result as PDF
   </button>
+
+  <div class="download-note">
+    <div class="download-icon">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <path d="M12 4v10m0 0l4-4m-4 4-4-4M5 20h14"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div>
+      <strong>Download your PDF before leaving</strong>
+      <p>Your report is generated for this session only. Please download your PDF now, as your data will not be saved after you leave or refresh the page.</p>
+    </div>
+  </div>
 </div>
 
 <div class="row-actions">
-  <button class="btn" id="btn-restart">&#8635; Start over</button>
+  <button class="btn" id="btn-restart">↻ Start over</button>
 </div>
       </div>
     </div>
@@ -881,15 +967,22 @@ async function downloadResultsPDF() {
   const originalText = button.innerHTML;
   button.disabled = true;
   button.innerHTML = "Preparing PDF...";
-  const actionButtons = document.querySelector(".row-actions");
+ const stepper = document.querySelector(".stepper");
+
+// Saare row-actions hide honge (Back, Edit, Start over)
+const actionButtons = document.querySelectorAll(".row-actions");
+
+// PDF button + reminder hide hoga
 const pdfButton = document.querySelector(".pdf-download-wrap");
 
-if (actionButtons) actionButtons.style.display = "none";
+// Hide before capture
+if (stepper) stepper.style.display = "none";
+actionButtons.forEach(el => el.style.display = "none");
 if (pdfButton) pdfButton.style.display = "none";
 
   try {
     const canvas = await html2canvas(report, {
-      scale: 1.5,
+      scale: 2,
       useCORS: true,
       backgroundColor: "#eef6fd",
       logging: false,
@@ -980,8 +1073,9 @@ if (pdfButton) pdfButton.style.display = "none";
     alert("PDF could not be generated. Please try again.");
 
   } finally {
-    if (actionButtons) actionButtons.style.display = "";
-    if (pdfButton) pdfButton.style.display = "";
+   if (stepper) stepper.style.display = "";
+actionButtons.forEach(el => el.style.display = "");
+if (pdfButton) pdfButton.style.display = "";
     button.disabled = false;
     button.innerHTML = originalText;
 
@@ -1037,9 +1131,8 @@ function renderKpiDetail() {
         `).join("")}
       </div>
 
-      <div class="row-actions">
+     <div class="row-actions">
   <button class="btn btn-ghost" id="btn-back-dash">&#8592; Back to Results</button>
-  <button class="btn btn-ghost" id="btn-edit">Edit numbers</button>
   <button class="btn" id="btn-restart">&#8635; Start over</button>
 </div>
 
@@ -1047,8 +1140,29 @@ function renderKpiDetail() {
   <button class="btn pdf-download-btn" id="btn-download-pdf">
     &#128196; Download result as PDF
   </button>
+
+  <div class="download-note">
+    <div class="download-icon">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <path d="M12 4v10m0 0l4-4m-4 4-4-4M5 20h14"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div>
+      <strong>Download your PDF before leaving</strong>
+      <p>Your report is generated for this session only. Please download your PDF now, as your data will not be saved after you leave or refresh the page.</p>
+    </div>
+  </div>
 </div>
-  `;
+
+<div class="row-actions">
+  <button class="btn btn-ghost" id="btn-edit">Edit numbers</button>
+</div>
+`;
 
   document.getElementById("btn-back-dash").addEventListener("click", () => { state.page = ""; state.step = "dashboard"; render(); });
   document.getElementById("btn-edit").addEventListener("click", () => { state.page = ""; state.step = "form"; render(); });

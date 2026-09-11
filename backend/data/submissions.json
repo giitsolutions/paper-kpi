@@ -1358,5 +1358,341 @@
       }
     ],
     "submittedAt": "2026-09-10T09:33:21.218Z"
+  },
+  {
+    "name": "harshu",
+    "email": "harshijain1105@gmail.com",
+    "material": "agro",
+    "product": "board",
+    "values": {
+      "growth": "4.6",
+      "ebitda": "21",
+      "fibre_agro": "32",
+      "fiber_yield": "89",
+      "manpower": "12",
+      "oee_board": "34",
+      "finishing_yield": "21",
+      "inventory": "44",
+      "otif": "5",
+      "coating_yield": "9",
+      "condensate": "12",
+      "breaks": "66"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 72.78851518297884
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 99.97438366131962
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": null
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": 5.441866236537128
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": 2.051307848767077
+      }
+    ],
+    "submittedAt": "2026-09-11T05:26:11.523Z"
+  },
+  {
+    "name": "harshita",
+    "email": "harshijain1105@gmail.com",
+    "material": "waste",
+    "product": "board",
+    "values": {
+      "growth": "4.3",
+      "ebitda": "21",
+      "fibre_waste": "4",
+      "fiber_yield": "9"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 71.83247253176869
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 50.192197072184186
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": null
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T06:20:30.257Z"
+  },
+  {
+    "name": "harshita",
+    "email": "harshijain1105@gmail.com",
+    "material": "waste",
+    "product": "newsprint",
+    "values": {
+      "growth": "5.6",
+      "ebitda": "11",
+      "fibre_waste": "54",
+      "fiber_yield": "32",
+      "electricity": "11",
+      "steam": "4",
+      "evap_ratio": "7",
+      "h2o2": "22",
+      "na2s2o4": "9",
+      "rosin": "6",
+      "pac": "11",
+      "oba": "3",
+      "starch": "98"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 61.34035522842903
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 64.56456491089791
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": 66.08870123814302
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": 53.40947061017778
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:00:56.761Z"
+  },
+  {
+    "name": "harshita",
+    "email": "harshijain1105@gmail.com",
+    "material": "waste",
+    "product": "newsprint",
+    "values": {
+      "growth": "4.5",
+      "ebitda": "11",
+      "fibre_waste": "32",
+      "fiber_yield": "22",
+      "electricity": "77",
+      "steam": "11",
+      "evap_ratio": "32"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 57.87913905528099
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 53.5691335625562
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": 66.62925277978947
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:12:28.491Z"
+  },
+  {
+    "name": "harshita",
+    "email": "harshijain1105@gmail.com",
+    "material": "waste",
+    "product": "newsprint",
+    "values": {
+      "growth": "6",
+      "ebitda": "7.8",
+      "fibre_waste": "21",
+      "fiber_yield": "32",
+      "electricity": "11",
+      "steam": "9",
+      "evap_ratio": "5"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 55.85711499037551
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 64.56471650501278
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": 57.952532545747395
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:17:23.471Z"
+  },
+  {
+    "name": "harshu",
+    "email": "harshijain1105@gmail.com",
+    "material": "agro",
+    "product": "board",
+    "values": {
+      "growth": "22",
+      "ebitda": "11",
+      "fibre_agro": "5.6",
+      "fiber_yield": "33"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 81.1848122004216
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 63.01695455892728
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": null
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:30:38.032Z"
+  },
+  {
+    "name": "harshu",
+    "email": "harshijain1105@gmail.com",
+    "material": "agro",
+    "product": "newsprint",
+    "values": {
+      "growth": "5.4",
+      "ebitda": "11",
+      "fibre_agro": "43",
+      "fiber_yield": "11",
+      "electricity": "32",
+      "steam": "11",
+      "evap_ratio": "43"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 60.71948608953535
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": 49.98751245555891
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": 66.66503555444531
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:36:21.869Z"
+  },
+  {
+    "name": "harsgu",
+    "email": "harshijain1105@gmail.com",
+    "material": "waste",
+    "product": "newsprint",
+    "values": {
+      "growth": "2.3",
+      "ebitda": "45"
+    },
+    "categoryScores": [
+      {
+        "title": "Financial Performance",
+        "score": 69.63227323325506
+      },
+      {
+        "title": "Fibre & Raw Material",
+        "score": null
+      },
+      {
+        "title": "Utilities & Energy",
+        "score": null
+      },
+      {
+        "title": "Chemical Consumption",
+        "score": null
+      },
+      {
+        "title": "Operational Efficiency & Productivity",
+        "score": null
+      },
+      {
+        "title": "Quality & Delivery",
+        "score": null
+      }
+    ],
+    "submittedAt": "2026-09-11T07:45:56.997Z"
   }
 ]
