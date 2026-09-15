@@ -452,12 +452,15 @@ function renderHome() {
         <div class="hero-content">
           <p class="eyebrow">Data driven · Smarter decisions</p>
           <h1>Benchmark your mill against industry performance</h1>
-          <p class="lede">Compare your key performance indicators with paper-industry benchmarks, understand your percentile position, and identify opportunities to improve efficiency and profitability.</p>
-          <div class="hero-pills">
-            <span class="hero-pill">Industry benchmarks</span>
-            <span class="hero-pill">KPI percentiles</span>
-            <span class="hero-pill">Actionable insights</span>
-          </div>
+          <p class="lede">
+  Compare your key performance indicators with paper-industry benchmarks,
+  understand your percentile position, and identify opportunities to improve
+  efficiency and profitability.
+</p>
+
+<button class="btn hero-btn" id="btn-home-continue">
+  Get Started &#8594;
+</button>
         </div>
         <div class="hero-visual">
         <img src="img/paper-mill-hero.png" alt="Paper mill industry">
@@ -469,11 +472,6 @@ function renderHome() {
         <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a7 7 0 0 0-4 12.74V19h8v-3.26A7 7 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 22h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><h3>KPI Percentiles</h3><p>See how each KPI maps onto your benchmark distribution.</p></div>
         <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Actionable Insights</h3><p>Find strengths and improvement areas from your results dashboard.</p></div>
       </div>
-
-      <div class="row-actions">
-        <button class="btn" id="btn-home-continue">Get Started &#8594;</button>
-      </div>
-    </div>
   `;
 
   document.getElementById("btn-home-continue").addEventListener("click", () => {
