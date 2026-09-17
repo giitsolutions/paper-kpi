@@ -1234,6 +1234,12 @@ function renderKpiDetail() {
   <button class="btn btn-ghost" id="btn-edit">Edit numbers</button>
 </div>
 `;
+  document.getElementById("btn-back-dash").addEventListener("click", () => {
+  state.page = "";
+  state.step = "dashboard";
+  state.detailCat = null;
+  render();
+});
   document.getElementById("btn-edit").addEventListener("click", () => { state.page = ""; state.step = "form"; render(); });
   document.getElementById("btn-restart").addEventListener("click", () => {
     Object.assign(state, { page: "home", step: "home", name: "", email: "", material: "", product: "", values: {}, openCat: "financial", detailCat: null });
